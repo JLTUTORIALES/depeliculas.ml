@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', 'Sans-Serif';
+    -webkit-user-drag: none;
+    color: #666;
+}
+
+body{
+    background: #444;
+}
+
+::-webkit-scrollbar{
+    width: 5px;
+    background: #222;
+}
+
+::-webkit-scrollbar-thumb{
+    background: #666;
+}
+
+nav{
+    width: 100%;
+    padding: 15px 0px;
+    background: #222;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+}
+nav *{
+    display: inline;
+    font-size: 18px;
+    border: none;
+}
+nav input[type='text']{
+    padding: 0px 10px;
+    border-radius: 25px;
+    width: 60%;
+}
+nav button{
+    background: none;
+    border: none;
+    font-size: 24px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+nav button:hover{
+    transform: scale(1.2);
+}
+
+nav button *{
+    color: #FFF;
+}
+nav form{
+    float: right;
+}
+
+nav a{
+    margin-left: 15px;
+}
+
+header{
+    width: 100%;
+    text-align: center;
+    margin-top: 60px;
+    background: #ddd;
+    padding: 50px 0px;
+}
+header img{
+    width: 20%;
+    margin-top: 25px;
+}
+header h2{
+    margin-top: 25px;
+    font-size: 40px;
+}
+
+.header-text{
+    margin: 10px;
+}
+
+.tags{
+    width: 100%;
+    background: #222;
+    color: #eee;
+    padding: 10px 0px;
+    text-align: center;
+}
+.tags p, .tags span{
+    color: #eee;
+    font-size: 18px;
+    margin: 10px 0px;
+}
+.tags ul li{
+    display: inline-block;
+    padding: 10px;
+    background: #444;
+    margin: 5px;
+    border-radius: 10px;
+}
+.tags ul{
+    margin: 25px 0px;
+}
+.tags ul li a{
+    color:  #eee;
+    text-decoration: none;
+}
+
+.tags li:hover{
+    transform: scale(1.1);
+    background: #222;
+}
+
+@media screen and (max-width: 320px){
+    nav a[href='inicio']{
+        display: none;
+    }
+
+    nav form{
+        float: none;
+        text-align: center;
+    }
+}
+
+.movies .movie{
+    display: inline-block;
+    background: none;
+    border: solid 1px #999;
+    margin: 2px;
+    width: 168px;
+    text-align: center;
+}
+
+.movies .movie a{
+    text-decoration: none;
+    color: #66A;
+}
+
+.movies .movie img{
+    width: 168px;
+    height: 225px;
+    transition: filter 1s;
+}
+
+.movies .movie img:hover{
+    filter: saturate(300%);
+}
+
+.main-content, .movie-descr{
+    border: solid 1px #444;
+    border-top: none;
+    text-align: center;
+    display: inline-block;
+    width: 80%;
+    background:  #eee;
+    padding: 25px 0px;
+}
+
+@media screen and (max-width: 660px){
+    .main-content{
+        width: 100%;
+        border: none;
+    }
+}
+
+.split-category{
+    background: #99e;
+    color: #fff;
+    font-size: 24px;
+    display: inline-block;
+    width: 100%;
+    padding: 5px 0px;
+    margin: 25px 0px;
+    text-align: center;
+}
+.ficha-pelicula{
+    text-align: justify;
+    display: table;
+    width: 100%;
+}
+.ficha-pelicula .l-info{
+    width: 200px;
+    height: 299px;
+    display: table-cell;
+    text-align: center;
+}
+.ficha-pelicula .l-info img{
+    width: 200px;
+    height: 299px;
+    margin: 25px;
+}
+
+.ficha-pelicula .info{
+    vertical-align: top;
+    padding: 10px;
+    display: table-cell;
+    width: 80%;
+}
+.ficha-pelicula .info ul{
+    list-style: none;
+}
+.ficha-pelicula .info li{
+    margin: 20px 0px;
+}
+.ficha-pelicula .info p{
+    margin-bottom: 15px;
+}
+.ficha-pelicula .l-info button{
+    width: 80%;
+    padding: 25px 0px;
+}
+
+@media screen and (max-width: 714px){
+    .movie-descr{
+        width: 100%;
+        border: none;
+    }
+    .ficha-pelicula{
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+    }
+    .ficha-pelicula .info{
+        display: justify !important;
+        width: 100%;
+        padding: 0;
+    }
+    .ficha-pelicula .l-info{
+        display: inline-block;
+        text-align: center;
+        width: 100%;
+        height: auto;
+    }
+
+    .ficha-pelicula .l-info img{
+        margin: 25px 0px;
+    }
+
+    .ficha-pelicula .l-info button{
+        margin-bottom: 15px;
+    }
+
+    .ficha-pelicula .info p{
+        margin: 25px;
+        text-align: justify !important;
+    }
+
+    .ficha-pelicula span{
+        width: 90%;
+    }
+    
+}
